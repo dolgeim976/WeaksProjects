@@ -1,1 +1,1 @@
-# MiniProjectWeek1
+# WeaksProjects
