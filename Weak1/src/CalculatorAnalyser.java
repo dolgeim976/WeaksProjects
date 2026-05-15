@@ -21,8 +21,8 @@ public class CalculatorAnalyser {
         System.out.printf("Сумма чисел от 1 до %d = %d\n", number, getSumNum(number));
 
         getFactorial(number);
+        System.out.print("\nТаблица умножения для числа ↓");
         printTableMultiplication(number);
-        System.out.println("\nТаблица умножения для числа: ");
 
     }
 
@@ -56,8 +56,7 @@ public class CalculatorAnalyser {
         if (userNum < 10) {
             return 1;
         } else {
-
-            while (userNum > 10) {
+            while (userNum >= 10) {
                 userNum = userNum / 10;
                 count++;
             }
@@ -71,12 +70,17 @@ public class CalculatorAnalyser {
 
         if (number < 0) {
             System.out.println("Факториал для отрицательного числа в математике не определён.");
+            return;
         } else if (number == 0) {
             System.out.println("Факториал числа 0 равен 1");
             return;
         } else {
-            for (int i = 1; i <= number; i++) {
-                fact *= i;
+            if (number > 12) {
+                System.out.println("Число превышает разерешнный диапазон, т.к больше 12");
+            } else {
+                for (int i = 1; i <= number; i++) {
+                    fact *= i;
+                }
             }
         }
 
